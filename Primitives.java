@@ -1,5 +1,6 @@
 /**
  * Class Primitives
+ * Refresher for primitive data types
  */
 class primitives{
     public static void main(String [] args){
