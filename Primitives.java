@@ -2,16 +2,18 @@
  * Class Primitives
  * Refresher for primitive data types
  */
+import java.lang.*;
+
 class primitives{
     public static void main(String [] args){
-        System.out.println(countBits(15));
-        System.out.println(shiftRight(15));
-        System.out.println(shiftLeft(15));
-        System.out.println(bitwiseAnd(15, 2));
-        System.out.println(bitwiseOr(15,16));
-        System.out.println(bitwiseXOR(8, 1));
-        System.out.println(bitwiseCompliment(60));
-        System.out.println(zeroFillRightShift(16));
+        countBits(15);
+        shiftRight(15);
+        shiftLeft(15);
+        bitwiseAnd(15, 2);
+        bitwiseOr(15,16);
+        bitwiseXOR(8, 1);
+        bitwiseCompliment(60);
+        zeroFillRightShift(16);
     }
 /**
  * 
@@ -24,6 +26,7 @@ public static short countBits(int x){
         numBits += (x & 1);
         x >>>=1;
     }
+    System.out.println("Bits Counted : " + numBits);
     return numBits;
 }
 /**
@@ -33,6 +36,7 @@ public static short countBits(int x){
  */
 public static int shiftRight(int x) {
     x >>= 2;
+    System.out.println("Binary " + x + " : " + Integer.toBinaryString(x));
     return x;
 }
 
@@ -43,6 +47,7 @@ public static int shiftRight(int x) {
  */
 public static int shiftLeft(int x){
     x <<= 2;
+    System.out.println("Binary " + x + " : " + Integer.toBinaryString(x));
     return x;
 }
  /**
@@ -54,6 +59,7 @@ public static int shiftLeft(int x){
   */
 public static int bitwiseAnd(int x, int y){
     int and = x & y;
+    System.out.println("Binary " + and + " : " + Integer.toBinaryString(and));
     return and;
 }
 /**
@@ -65,6 +71,7 @@ public static int bitwiseAnd(int x, int y){
  */
 public static int bitwiseOr(int x, int y){
     int or = x | y;
+    System.out.println("Binary " + or + " : " + Integer.toBinaryString(or));
     return or;
 }
 /**
@@ -76,6 +83,7 @@ public static int bitwiseOr(int x, int y){
  */
 public static int bitwiseXOR(int x, int y){
     int xor = x ^ y;
+    System.out.println("Binary " + xor + " : " + Integer.toBinaryString(xor));
     return xor;
 }
 /**
@@ -86,6 +94,7 @@ public static int bitwiseXOR(int x, int y){
  */
 public static int bitwiseCompliment(int x){
     int compliment = ~x;
+    System.out.println("Binary " + compliment + " : " + Integer.toBinaryString(compliment));
     return compliment;
 }
 /**
@@ -96,7 +105,9 @@ public static int bitwiseCompliment(int x){
  */
 public static int zeroFillRightShift(int x){
     int zeroFill = x>>>2;
+    System.out.println("Binary " + zeroFill + " : " + Integer.toBinaryString(zeroFill));
     return zeroFill; 
 }
+
 
 }
