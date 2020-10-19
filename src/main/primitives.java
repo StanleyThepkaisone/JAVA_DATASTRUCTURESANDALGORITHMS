@@ -7,9 +7,6 @@ package main;
 //import java.lang.*;
 
 public class primitives{
-    public static void main(String[] args){
-      
-    }
 /**
  * 
  * @param x takes input x and counts the number of bits.
